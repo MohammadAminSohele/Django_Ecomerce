@@ -25,7 +25,7 @@ from .views import home_page, header, footer, about_page
 urlpatterns = [
     path('', home_page),
     path('', include('ecomerce_account.urls')),
-    path('', include('ecomerce_products.urls')),
+    path('products/', include('ecomerce_products.urls')),
     path('', include('ecomerce_contact.urls')),
     path('', include('ecomerce_order.urls')),
     path('about', about_page),

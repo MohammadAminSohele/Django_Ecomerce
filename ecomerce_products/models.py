@@ -70,6 +70,7 @@ class Product(models.Model):
         ProductCatagory, blank=True, verbose_name='دسته بندی ها')
     visit_count = models.IntegerField(
         default=0, verbose_name='پربازدیدترین محصولات')
+    about_manufacturer=models.CharField(max_length=120, verbose_name='درباره سازنده',default='لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت')    
 
     class Meta:
         verbose_name = 'محصول'
@@ -81,7 +82,8 @@ class Product(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return f"/products/{self.id}/{self.title.replace(' ', '-')}"
+        # return f"/products/{self.id}/{self.title.replace(' ', '-')}"
+        return "fsdkljfsdkljfsdkl"
 
 
 class ProductGallary(models.Model):

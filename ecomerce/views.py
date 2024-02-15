@@ -45,7 +45,7 @@ def footer(request):
     site_setting = SiteSetting.objects.first()
     context = {
         'about_us': 'thsi is my first django project',
-        'setting': site_setting
+        'setting': site_setting,
     }
     return render(request, 'shared/Footer.html', context)
 
